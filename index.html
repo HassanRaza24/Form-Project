@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 30px;
+        }
+
+        form {
+            max-width: 800px;
+            margin: auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 15px;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: 600;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        .inline {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .row div {
+            flex: 1;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="Lec5.html">
+
+        <h2>Student Registration Form</h2>
+
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <div class="row">
+                <div>
+                    <label>First Name</label>
+                    <input type="text" placeholder="Enter first name" required>
+                </div>
+
+                <div>
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Enter last name" required>
+                </div>
+            </div>
+
+            <label>Email</label>
+            <input type="email" placeholder="example@email.com" required>
+
+            <label>Password</label>
+            <input type="password" required>
+
+            <label>Phone Number</label>
+            <input type="number" pattern="[0-9]{11}" placeholder="03XXXXXXXXX">
+
+            <label>Date of Birth</label>
+            <input type="date">
+
+            <label>Gender</label>
+            <input class="inline" type="radio" name="gender"> Male
+            <input class="inline" type="radio" name="gender"> Female
+            <input class="inline" type="radio" name="gender"> Other
+        </fieldset>
+
+        <!-- Education Information -->
+        <fieldset>
+            <legend>Education Details</legend>
+
+            <label>Highest Qualification</label>
+            <select>
+                <option>Select</option>
+                <option>Matric</option>
+                <option>Intermediate</option>
+                <option>Bachelors</option>
+                <option>Masters</option>
+            </select>
+
+            <label>Field of Study</label>
+            <select>
+                <optgroup label="Computer Science">
+                    <option>Web Development</option>
+                    <option>AI / ML</option>
+                    <option>Data Science</option>
+                </optgroup>
+
+                <optgroup label="Engineering">
+                    <option>Software Engineering</option>
+                    <option>Electrical</option>
+                </optgroup>
+            </select>
+
+            <label>Skills</label>
+            <input class="inline" type="checkbox"> HTML
+            <input class="inline" type="checkbox"> CSS
+            <input class="inline" type="checkbox"> JavaScript
+            <input class="inline" type="checkbox"> React
+        </fieldset>
+
+        <!-- Uploads & Preferences -->
+        <fieldset>
+            <legend>Uploads & Preferences</legend>
+
+            <label>Upload Resume</label>
+            <input type="file">
+
+            <label>Available Time</label>
+            <input type="time">
+
+            <label>Experience Level (0–10)</label>
+            <input type="range" min="0" max="10">
+        </fieldset>
+
+        <!-- Additional Info -->
+        <fieldset>
+            <legend>Additional Information</legend>
+
+            <label>About Yourself</label>
+            <textarea rows="4" placeholder="Write something about yourself"></textarea>
+
+            <label>
+                <input type="checkbox" required>
+                I agree to terms & conditions
+            </label>
+        </fieldset>
+
+        <!-- Buttons -->
+        <button type="submit">Submit Form</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+</body>
+
+</html>
